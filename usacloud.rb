@@ -1,8 +1,8 @@
 class Usacloud < Formula
 
-  usacloud_version = "0.0.8"
-  sha256_src = "1fa6feec89e0f0d815c3082c5315946b32ac7b001eca6b4a40ac71c14b8b89ae"
-  sha256_bash_completion = "e4eba9bed59018176a39b8e33ea97c066ebd7344b80c2205920261e55498de45"
+  usacloud_version = "0.0.9"
+  sha256_src = "3c4564dd9c6e2b0fb469bf584633905b88b5d39fbe61fcc2b589e2fccbeed05c"
+  sha256_bash_completion = "162eacf51913ef9057239a6e042846e0a6eef49b8d49ed1f404cb551c71cf4d8"
 
   desc "Unofficial 'sacloud' - CLI client of the SakuraCloud"
   homepage "https://github.com/sacloud/usacloud"
