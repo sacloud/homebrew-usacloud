@@ -1,9 +1,9 @@
 class Usacloud < Formula
 
-  usacloud_version = "0.4.0"
-  sha256_src_darwin = "5c8862b0291177b5a0dc3e02d664cf45bcaef1fd7773349cd5495801d43d0f06"
-  sha256_src_linux = "1b45ad964fb0c36bc37835b58671dcfc4faeba24442cad24555278f77ecd4cb2"
-  sha256_bash_completion = "3b2b3e6f3136a842659939f4055e7c98ab6fc24d0ca3aa495f25e2db46df7ee1"
+  usacloud_version = "0.5.0"
+  sha256_src_darwin = "e68fc01661a364cb3d391c2daae26670dd7620d0d8e5d87361e4b82328e56be4"
+  sha256_src_linux = "5e5099fe1f4c6a94e97fe1367358bee60f45872387f8439a2fe2bd2380071658"
+  sha256_bash_completion = "f601ca5c8ed5f7be1d887758bef481ac62702085e49d0d3dc1cd1a30c6cc4eba"
 
   desc "Unofficial 'sacloud' - CLI client of the SakuraCloud"
   homepage "https://github.com/sacloud/usacloud"
@@ -20,7 +20,7 @@ class Usacloud < Formula
 
   option "without-completions", "Disable bash completions"
   resource "bash_completion" do
-    url "http://releases.usacloud.jp/usacloud/contrib/completion/bash/usacloud"
+    url "https://releases.usacloud.jp/usacloud/contrib/completion/bash/usacloud"
     sha256 sha256_bash_completion
   end
 
