@@ -5,25 +5,25 @@
 class Usacloud < Formula
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.1.2"
+  version "1.1.3"
   license "Apache 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.2/usacloud_darwin-amd64.zip"
-    sha256 "2ed73818947efcb416696ef47c3a6dc469b342cde0f4661ba827e2dfaea2adb6"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.3/usacloud_darwin-amd64.zip"
+    sha256 "eda95fc142147a3a420efcb6ca1932ba32654f0c597288f63bd574bdf9486ac0"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.2/usacloud_linux-amd64.zip"
-    sha256 "5d9796ac65212b36a403d26c5eb3f78603c48dd0cf0a7208affc01bc26046dd2"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.3/usacloud_linux-amd64.zip"
+    sha256 "e8b30a5a741ad6496446def52472c8610a63e02ea52d22eb94640cc709131357"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.2/usacloud_linux-arm.zip"
-    sha256 "0f72c03b84492296054014b4bc77b1cde43d55cdfd12ec4f642ca2d608ec04d4"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.3/usacloud_linux-arm.zip"
+    sha256 "ebf3fc57304bfb858f5bf001789d65196dd3c3724cbaa6f2a492801089d0543c"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.2/usacloud_linux-arm64.zip"
-    sha256 "6cc4562af47aa30864b86522f32f23dda8b8b825a987a62f722d2b4e0962d0f2"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.3/usacloud_linux-arm64.zip"
+    sha256 "03e32aa415736303888359550f8cd8493b01aac8ed75b0cd937d3570ac93e8d7"
   end
 
   def install
