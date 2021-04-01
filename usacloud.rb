@@ -5,25 +5,29 @@
 class Usacloud < Formula
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.1.4"
+  version "1.1.5"
   license "Apache 2.0"
   bottle :unneeded
 
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.4/usacloud_darwin-amd64.zip"
-    sha256 "fb0fbd1b13ac62ad8168ff7084f13de12414aa17648fd37848a7cb73f29fcc70"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.5/usacloud_darwin-amd64.zip"
+    sha256 "32dd5c350862025ae9628a94ed2ca62b953e11f01a92e97da608a4a37603fa71"
+  end
+  if OS.mac? && Hardware::CPU.arm?
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.5/usacloud_darwin-arm64.zip"
+    sha256 "0f5b518b8829040a26bd27a1ac8d77340d6508d7a0ff48d40de38485396f7993"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.4/usacloud_linux-amd64.zip"
-    sha256 "baa336fe993ba04f7a8874830228e37bcbdd905b618eea79e06cbc3ed600ca2a"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.5/usacloud_linux-amd64.zip"
+    sha256 "55b347a9b16df9d0aaa7bc4a48a7f9731b163c6584a3a0b47201872eb87ed27c"
   end
   if OS.linux? && Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.4/usacloud_linux-arm.zip"
-    sha256 "0cee5d3306c04b76453482f5baa069f21a9541119bec8b372c65492d151a2003"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.5/usacloud_linux-arm.zip"
+    sha256 "a6ae70570191df30ae0bccef2d2f3f012af9d1174aa826cf98a88a34f76529fe"
   end
   if OS.linux? && Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-    url "https://github.com/sacloud/usacloud/releases/download/v1.1.4/usacloud_linux-arm64.zip"
-    sha256 "2003a857ef420162e0105a85252f4e68bed555d54c86a4d2211c2f3f7f797bb7"
+    url "https://github.com/sacloud/usacloud/releases/download/v1.1.5/usacloud_linux-arm64.zip"
+    sha256 "009f0cf92e3d4a1ccd2e264d7030529e5c87581fa5baf9fdf2fa4578b4ce1fd7"
   end
 
   def install
