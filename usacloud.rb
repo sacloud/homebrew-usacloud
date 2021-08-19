@@ -5,33 +5,33 @@
 class Usacloud < Formula
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.4.0"
+  version "1.4.1"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.4.0/usacloud_darwin-amd64.zip"
-      sha256 "a335a47f9237245c75fa13bdf962f30f34ae7d762dda394caccf15da3a8978f7"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.4.1/usacloud_darwin-amd64.zip"
+      sha256 "ac735d1acf82f3b96989093229af768c45a520db90831afa0c98c10caa22aea0"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.4.0/usacloud_darwin-arm64.zip"
-      sha256 "8db6b6ddd3a5c0c0001e82c1f8836bb576204dbc2784247a675ff73ca59adf93"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.4.1/usacloud_darwin-arm64.zip"
+      sha256 "516a0867ed3fd2d3081c071704e33f6698826111e31f06cea0dab5bb490ea84c"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.4.0/usacloud_linux-amd64.zip"
-      sha256 "a678420de9dbf3db7a51a1b136912671954f9033ef086f86ff4c7a94d3ce9146"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.4.1/usacloud_linux-amd64.zip"
+      sha256 "8ff039806c771a6b353817b10d3d150310f10f61124d5dfe96b35db363d7d12e"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.4.0/usacloud_linux-arm.zip"
-      sha256 "ca031c84d5f7af37afe2a77337f6fe58eb0c2b6b85aa95a3c8eb6482f898d643"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.4.1/usacloud_linux-arm.zip"
+      sha256 "ee5cdc3f6ed1a7297a4edccb76319a2c9cb78d87d38f631668644f47f7241dd3"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.4.0/usacloud_linux-arm64.zip"
-      sha256 "b273025ecc7545e7df8d966f34eccda0fd51900e4bd8f81628a60178e6c5c384"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.4.1/usacloud_linux-arm64.zip"
+      sha256 "44654fa761d48ad3f8e8b84909174816770f1d4362249b3b85983ddad18a02e2"
     end
   end
 
