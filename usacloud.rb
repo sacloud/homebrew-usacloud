@@ -5,33 +5,33 @@
 class Usacloud < Formula
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.6.0"
+  version "1.6.1"
   license "Apache 2.0"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.6.0/usacloud_darwin-arm64.zip"
-      sha256 "758171672edbb8089d05e57f92ade9b7bcf592c31d3d867022114ea0c6c57ca0"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.6.1/usacloud_darwin-arm64.zip"
+      sha256 "f50310b730d6e35f8608fef29532b565617ac54daf232baea2d357b657b3a36c"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.6.0/usacloud_darwin-amd64.zip"
-      sha256 "842e128f533a39458ebb4e904b490c8da7a66d845ea8610f948492294679186e"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.6.1/usacloud_darwin-amd64.zip"
+      sha256 "0a26dc14f1a959d7e5f2350a28704455075d49a6fc87fd8cb4903c9934f97824"
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.6.0/usacloud_linux-amd64.zip"
-      sha256 "937bbcb62bf131dddead6bcd2146979a1887990a73c4ec7c388dd138051d5006"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/sacloud/usacloud/releases/download/v1.6.1/usacloud_linux-arm64.zip"
+      sha256 "80d590cf9eae8b1119073eac3e8853bf102f3bfce390a13ab135e2552b40963e"
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.6.0/usacloud_linux-arm.zip"
-      sha256 "7fe011f8b1d263be034fa1b0c764363b422cf0ea3317ca86adf69632735bbca5"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.6.1/usacloud_linux-arm.zip"
+      sha256 "d15ee0ef8ac4d14b18c752022cad2999f751da63a06cf2a76d11c3b3eb81804c"
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.6.0/usacloud_linux-arm64.zip"
-      sha256 "ea89683ac61644b5fc0b1a72b55ac80c4e5b55d7723d885bb1d64a358655f7a8"
+    if Hardware::CPU.intel?
+      url "https://github.com/sacloud/usacloud/releases/download/v1.6.1/usacloud_linux-amd64.zip"
+      sha256 "6d52fcf897a83ca2304decba58932d062ef63c91f7568a27874a35f11fe6b640"
     end
   end
 
