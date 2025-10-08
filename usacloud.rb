@@ -5,21 +5,21 @@
 class Usacloud < Formula
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.16.1"
+  version "1.16.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.16.1/usacloud_darwin-amd64.zip"
-      sha256 "df5cce3b2a96b99238c1078dba87907d854f2b1e80f94065596279107a909909"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.16.2/usacloud_darwin-amd64.zip"
+      sha256 "9bd317d07dced149d045f470c314ab100e515bd20431b51032e71f7fa7b63ae1"
 
       def install
         bin.install "usacloud"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.16.1/usacloud_darwin-arm64.zip"
-      sha256 "91e089f854f66af7e17d8592c11f70b192136c474086f0cd18dbbb800328bcde"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.16.2/usacloud_darwin-arm64.zip"
+      sha256 "8557fbe3669eb3c4d04c941a833888663df2ca45143e38039ee847a032630f5a"
 
       def install
         bin.install "usacloud"
@@ -29,22 +29,22 @@ class Usacloud < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.16.1/usacloud_linux-amd64.zip"
-      sha256 "a18fe784439a299937ad259f8970ef12355af3c646286f58e2bcd88772d6a1b0"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.16.2/usacloud_linux-amd64.zip"
+      sha256 "c8fe4dcdbae9f2568ac71dc1cdcaf67645b84538196668ee056e209ef247e119"
       def install
         bin.install "usacloud"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.16.1/usacloud_linux-arm.zip"
-      sha256 "41b25a6a4d30a5e178cac7379cc972e5b664e3bb5909855f1634cb67d8b00058"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.16.2/usacloud_linux-arm.zip"
+      sha256 "0486ef6901cf8d14da0fdcac934b82463aa67361f91f98130905bd93df4f0590"
       def install
         bin.install "usacloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/sacloud/usacloud/releases/download/v1.16.1/usacloud_linux-arm64.zip"
-      sha256 "617ace12e03c9e2eac7658b7750ce88a7e8c9bf5c5224d0ed480b7441a0c9a2b"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.16.2/usacloud_linux-arm64.zip"
+      sha256 "227316bd420c8353a328cf077c1db0135f18723dbeb5742860f07bc554c65f5d"
       def install
         bin.install "usacloud"
       end
