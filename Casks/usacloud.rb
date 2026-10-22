@@ -2,7 +2,7 @@
 cask "usacloud" do
   desc ""
   homepage "https://github.com/sacloud/usacloud"
-  version "1.22.8"
+  version "1.22.9"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,27 +12,27 @@ cask "usacloud" do
 
   on_macos do
     on_intel do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.8/usacloud_darwin-amd64.zip",
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.9/usacloud_darwin-amd64.zip",
         verified: "github.com/sacloud/usacloud/"
-      sha256 "eab7e93c8a83dbaeaae44b52ed59ff1e1ebd1423f476e2fd5cd14e8c8887bbc3"
+      sha256 "acd49ea0254ea0d5619b363dde07750068791076856c3aabc45ddf236d854af0"
     end
     on_arm do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.8/usacloud_darwin-arm64.zip",
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.9/usacloud_darwin-arm64.zip",
         verified: "github.com/sacloud/usacloud/"
-      sha256 "bf56db732ff5fd2bb3c4e45e4190a48e615d6d816ee83dba1394cd79aaa841ed"
+      sha256 "07ec0f3dbb226a8d8adda36756025beaca9e7f6c7f7a784a657aac19856b2482"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.8/usacloud_linux-amd64.zip",
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.9/usacloud_linux-amd64.zip",
         verified: "github.com/sacloud/usacloud/"
-      sha256 "36f3f322702d3008261c68059082fcf3baa7bfe821ea347b32c082e836ed26dd"
+      sha256 "b47f39b7297907c66036ca76209414bb9380488c7104e008f255f8f3699975a8"
     end
     on_arm do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.8/usacloud_linux-arm64.zip",
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.9/usacloud_linux-arm64.zip",
         verified: "github.com/sacloud/usacloud/"
-      sha256 "e26f8ddefda4c6fc3296907cf82172110f216eb9da2d9e447c02cad7a538c4fe"
+      sha256 "40b228a48157f182582cd14852b6642585238fc2a54a463d60c7ffa3f6ae7295"
     end
   end
 
