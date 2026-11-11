@@ -12,32 +12,30 @@ cask "usacloud" do
 
   on_macos do
     on_intel do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_darwin-amd64.zip",
-        verified: "github.com/sacloud/usacloud/"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_darwin-amd64.zip"
       sha256 "d3318c25ad30ce7adde92a04cd91f51a5cfd5a09860c646b064738a37cca6d9a"
     end
     on_arm do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_darwin-arm64.zip",
-        verified: "github.com/sacloud/usacloud/"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_darwin-arm64.zip"
       sha256 "4e1e0f925a7b4f3202a613aeddd7d8bd6f3dd8587740570373add8493b02d3d3"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_linux-amd64.zip",
-        verified: "github.com/sacloud/usacloud/"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_linux-amd64.zip"
       sha256 "c77bafaca00843b215b94c17143d6cdf586ad818cc1d0c43bc88f844878a008c"
     end
     on_arm do
-      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_linux-arm64.zip",
-        verified: "github.com/sacloud/usacloud/"
+      url "https://github.com/sacloud/usacloud/releases/download/v1.22.10/usacloud_linux-arm64.zip"
       sha256 "4f959978dbe75fa6e6d09a965ec61cff4239a0d8dafb938879643bf548978b97"
     end
   end
 
-  postflight do
-    system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/usacloud"] if OS.mac?
+  postflight_steps do
+    on_macos do
+      run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{staged_path}}/usacloud"]
+    end
   end
 
   # No zap stanza required
